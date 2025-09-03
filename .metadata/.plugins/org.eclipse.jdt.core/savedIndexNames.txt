@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+C:\kdt-java-2025\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-3481095645.index
-3413270776.index
