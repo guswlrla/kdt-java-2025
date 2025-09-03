@@ -1,4 +1,5 @@
-package com.ruby.java.ch03_if;
+package edu;
+
 //3.1 주석문
 
 /*
@@ -11,7 +12,7 @@ package com.ruby.java.ch03_if;
 *  indentation: 코드 자동 formatting > ctrl+shift+f
 */
 
-public class 실습_3_1주석문 {
+public class Test17 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		/*
@@ -25,5 +26,4 @@ public class 실습_3_1주석문 {
 			sum += i;
 		}
 	}
-
 }
