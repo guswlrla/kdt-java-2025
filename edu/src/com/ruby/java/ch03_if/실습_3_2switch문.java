@@ -28,16 +28,30 @@ public class 실습_3_2switch문 {
 	 * }
 	 *     
 	 */
-	Scanner sc = new Scanner(System.in);
-	
-	//sysout
+	public static void main(String[] args) {		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("자판기 사용 비용");
+		System.out.println("1. 커피 - 2000원");
+		System.out.println("2. 맥주 - 2400원");
+		System.out.println("3. 콜라 - 1500원");
+		System.out.println("4. 주스 - 1200원");
 		
-	
-//	switch(choice) {
-//		case 1:
-//			System.out.println("커피" - 2000원");"
-//					+ "
-//					
-//	}
-	
+		int choice = sc.nextInt();
+		switch(choice) {
+			case 1:
+				System.out.println("커피를 선택하셨습니다.");
+				break;
+			case 2:
+				System.out.println("맥주를 선택하셨습니다.");
+				break;
+			case 3:
+				System.out.println("콜라를 선택하셨습니다.");
+				break;
+			case 4:
+				System.out.println("주스를 선택하셨습니다.");
+				break;
+			default:
+				System.out.println("잘못된 숫자 입니다.");
+		}
+	}	
 }

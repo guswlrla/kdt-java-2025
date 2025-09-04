@@ -14,11 +14,15 @@ public class 실습_2_6최소지폐수계산 {
 		
 		int money = 167000;
 		
-		int a = money/50000;
-		int b = (money%50000)/10000;
-//		int c = 
+		int a = money / 50000;
+		int b = (money % 50000) / 10000;
+		int c = (money % 10000) / 5000;
+		int d = (money % 5000) / 1000;
 		
-
+		System.out.println("5만원 지폐 장 수 : " + a);
+		System.out.println("1만원 지폐 장 수 : " + b);
+		System.out.println("5천원 지폐 장 수 : " + c);
+		System.out.println("1천원 지폐 장 수 : " + d);
 	}
 
 }

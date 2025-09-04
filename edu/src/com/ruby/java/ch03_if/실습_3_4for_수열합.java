@@ -11,8 +11,10 @@ package com.ruby.java.ch03_if;
 
 public class 실습_3_4for_수열합 {
 	public static void main(String[] args) {
-		for (int i = 0; i < args.length; i++) {
-			
+		int sum = 0;
+		for (int i = 0; i <= 100; i++) {
+			sum += i;
 		}
+		System.out.println("sum = " + sum);
 	}
 }
