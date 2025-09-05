@@ -20,6 +20,17 @@ public class 실습_4_2_배열생성최대값 {
 			if(price[i] > priceMax)
 				priceMax = price[i];
 		}
+		
+		int cnt = 0;
+		System.out.print("[");
+		for(int p : price) {
+			System.out.print(p);
+
+			if(price.length > cnt++)
+				System.out.print(" ,");
+		}
+		System.out.println("]");
+		
 		System.out.println("최댓값 : " + priceMax);
 	}
 

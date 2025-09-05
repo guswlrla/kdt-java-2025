@@ -1,4 +1,5 @@
 package com.ruby.java.ch04배열;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -16,12 +17,15 @@ public class 실습_4_3_배열_점수평균 {
 	public static void main(String[] args) {
 		int score[] = new int[10];
 		
+		// 랜덤으로 점수를 얻기 위한 변수
 		Random rd = new Random();
+		
+		// 랜덤으로 0~100까지 정수 입력
 		for(int i = 0; i < score.length; i++) {
-			score[i] = rd.nextInt(100); // 0~99 정수 생성
+			score[i] = rd.nextInt(101); // 0~100 정수 생성
 		}
 		
-		//System.out.println(Arrays.toString(score)); 밑의 코드와 똑같음
+//		System.out.println(Arrays.toString(score)); 밑의 코드와 똑같음
 //		System.out.print("[");
 //		for (int i = 0; i < score.length; i++) {
 //			System.out.print(score[i]);
@@ -30,10 +34,18 @@ public class 실습_4_3_배열_점수평균 {
 //		}
 //		System.out.println("]");
 		
+		// 학점 출력
 		for(int i = 0; i < score.length; i++ ) {
-			if(score[i] > 90)
+			if(score[i] >= 90)
 				System.out.println(score[i] + "점 - A학점");
+			else if(score[i] >= 80)
+				System.out.println(score[i] + "점 - B학점");
+			else if(score[i] >= 70)
+				System.out.println(score[i] + "점 - C학점");
+			else if(score[i] >= 60)
+				System.out.println(score[i] + "점 - D학점");
+			else
+				System.out.println(score[i] + "점 - F학점");
 		}
-		
 	}
 }
