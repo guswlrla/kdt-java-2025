@@ -30,7 +30,7 @@ public class gugudan {
 			System.out.println("\n");
 		}
 		for(int j = 1; j <= 9; j++) {
-			for (int i = col + 2; i <= col + 5; i++) {
+			for (int i = col + 2; i <= col; i++) {
 				System.out.print(i + " * " + j + " = " + i * j);
 				System.out.print("\t");
 			}
