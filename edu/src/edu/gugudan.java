@@ -21,7 +21,7 @@ public class gugudan {
 		}
 	}
 
-	private static void printColumn(int col) {
+//	private static void printColumn(int col) {
 //		for (int j = 1; j <= 9; j++) {
 //			for (int i = 2; i <= col + 1; i++) {
 //				System.out.print(i + " * " + j + " = " + i * j);
@@ -43,38 +43,16 @@ public class gugudan {
 //			}
 //			System.out.println("\n");
 //		}
-
-		int line = 1;
-		for (int j = 1; j <= 9; j++) {
-			for (int i = 2; i <= col + 1; i++) {
-				System.out.print(i + " * " + j + " = " + i * j);
-				System.out.print("\t");
-			}
-			line++;
-			System.out.println("\n");
-		}
-		for(int j = 1; j <= 9; j++) {
-			for (int i = col + 2; i <= 2 * col + 1 ; i++) {
-				System.out.print(i + " * " + j + " = " + i * j);
-				System.out.print("\t");
-			}
-			line++;
-			System.out.println("\n");
-		}
-		if(col line)
-		for(int j = 1; j <= 9; j++) {
-			for (int i = col+5; i <= 9  ; i++) {
-				System.out.print(i + " * " + j + " = " + i * j);
-				System.out.print("\t");
-			}
-			System.out.println("\n");
-		}
+//		
+//	}
+	
+	private static void printColumn(int col) {
 		
 	}
 
 	public static void main(String[] args) {
 		// printVertical();
 		// printHorizontal();
-		printColumn(4);
+		printColumn(5);
 	}
 }
