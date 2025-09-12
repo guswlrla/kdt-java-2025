@@ -111,7 +111,7 @@ class RegularCustomer extends Customer2 {
 
 	@Override
 	double getDiscountRate() {
-		return 0.03;
+		return REGULARDISCOUNT_RATE;
 	}
 }
 
@@ -131,7 +131,7 @@ class PremiumCustomer extends Customer2 {
 	
 	@Override
 	double getDiscountRate() {
-		return 0.1;
+		return PREMIUMDISCOUNT_RATE;
 	}
 }
 
@@ -185,7 +185,7 @@ class Order2 {
 		for(int i = 0; i < itemCount; i++) {
 			System.out.println("제품명 : " + items[i].toString() + ", 개수 : " + quantities[i] + " ==> 가격 : " + items[i].getPrice() * quantities[i]);
 		}
-		// customer.getDiscountRate() 한번만 쓰고 어떻게 다 호출되는거지?
+		// customer.getDiscountRate()
 		System.out.println("총액 : " + calculateTotal() + ", 할인율 : " + customer.getDiscountRate() + " , 할인금액 : -" + customer.applyDiscount(calculateTotal()));
 		System.out.println("할인 후 총액 : " + calculateDiscountedTotal());
 		System.out.println("-".repeat(55));
