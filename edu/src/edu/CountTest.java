@@ -1,4 +1,4 @@
-package com.ruby.java.ch06객체구현;
+package edu;
 //public class Count { // 오류가 발생하는 것을 확인 > 이해해야 
 // 232페이지 희색 박스 읽기
 

@@ -1,6 +1,6 @@
 package edu;
 
-public class Test4 {
+public class Test04 {
 	public static void main(String[] args) {
 		float exchangeRate = 1136.50F;
 		double USDAmount = 600.50;

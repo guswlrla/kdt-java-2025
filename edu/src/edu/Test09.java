@@ -1,6 +1,6 @@
 package edu;
 
-public class Test9 {
+public class Test09 {
 	public static void main(String[] args) {
 		int a = 10;
 		int b = 2;

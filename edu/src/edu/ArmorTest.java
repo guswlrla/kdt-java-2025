@@ -1,6 +1,4 @@
-package com.ruby.java.ch06객체구현;
-
-import edu.Armor;
+package edu;
 
 /*
  * 하나의 자바 파일(.java)에는 단 하나의 public 클래스만 선언해야 한다

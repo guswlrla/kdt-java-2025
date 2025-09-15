@@ -1,4 +1,4 @@
-package com.ruby.java.ch06객체구현;
+package edu;
 
 public class StaticMethodTest {
 	int num = 123;
