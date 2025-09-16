@@ -1,4 +1,4 @@
-package com.ruby.java.ch03_if;
+package com.ruby.java.ch03if;
 import java.util.Scanner;
 
 /*

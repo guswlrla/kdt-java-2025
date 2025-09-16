@@ -1,4 +1,4 @@
-package com.ruby.java.ch03_if;
+package com.ruby.java.ch03if;
 
 public class 실습_3_7for_피보나치수열 {
 	public static void main(String[] args) {
