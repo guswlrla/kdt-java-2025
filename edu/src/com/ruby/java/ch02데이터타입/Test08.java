@@ -1,4 +1,4 @@
-package edu;
+package com.ruby.java.ch02데이터타입;
 
 public class Test08 {
 	public static void main(String[] args) {

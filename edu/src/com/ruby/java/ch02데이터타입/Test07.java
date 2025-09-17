@@ -1,4 +1,4 @@
-package edu;
+package com.ruby.java.ch02데이터타입;
 
 public class Test07 {
 	public static void main(String[] args) {
@@ -17,6 +17,7 @@ public class Test07 {
 		int c = 10;
 		int d = 10;
 		System.out.println(++c); // 11
-		System.out.println(d++); // 10
+		System.out.println(d++); // 10, 후위연산자는 세미콜론 기준
+		System.out.println(d); // 11
 	}
 }
