@@ -46,6 +46,44 @@
 > - 코드 줄 맞추기 : ctrl + shift f
 > - import 생성 : ctrl + shift + o
 
+## :white_check_mark:2일차
+### 1. 조건문
+- if문
+    - 
+- if ~ else문
+
+- if ~ else if문
+
+- switch ~ case문
+
+
+### 2. 반복문
+- for문
+
+- while문
+
+- do ~ while문
+
+
+
+
+### 3. 반복문 제어
+- break문
+
+- continue문
+
+
+
+### 4. 제어문 중첩
+- if문 중첩
+
+- 반복문 중첩
+
+
+
+
+
+
 
 ## 25.9.8
 객체? -> 세상 만물(물리적인것뿐만 아니라 관념적인것도 포함)
