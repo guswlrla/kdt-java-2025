@@ -21,38 +21,26 @@ public class gugudan {
 		}
 	}
 
-//	private static void printColumn(int col) {
-//		for (int j = 1; j <= 9; j++) {
-//			for (int i = 2; i <= col + 1; i++) {
-//				System.out.print(i + " * " + j + " = " + i * j);
-//				System.out.print("\t");
-//			}
-//			System.out.println("\n");
-//		}
-//		for(int j = 1; j <= 9; j++) {
-//			for (int i = col + 2; i <= 2 * col + 1 ; i++) {
-//				System.out.print(i + " * " + j + " = " + i * j);
-//				System.out.print("\t");
-//			}
-//			System.out.println("\n");
-//		}
-//		for(int j = 1; j <= 9; j++) {
-//			for (int i = col+5; i <= 9  ; i++) {
-//				System.out.print(i + " * " + j + " = " + i * j);
-//				System.out.print("\t");
-//			}
-//			System.out.println("\n");
-//		}
-//		
-//	}
-	
 	private static void printColumn(int col) {
-		
+		// 인덱스 다루기 어려우니깐 위에서 다루고 시작
+		for (int start = 2; start <= 9; start += col) {
+			int end = Math.min(start + col - 1, 9); // 9를 초과하지 않도록 제한
+
+			for (int j = 1; j <= 9; j++) {
+				for (int i = start; i <= end; i++) {
+					System.out.print(i + " * " + j + " = " + i * j);
+					if (i < end)
+						System.out.print("\t");
+				}
+				System.out.println("\n");
+			}
+			System.out.println("\n");
+		}
 	}
 
 	public static void main(String[] args) {
 		// printVertical();
 		// printHorizontal();
-		printColumn(5);
+		printColumn(3);
 	}
 }

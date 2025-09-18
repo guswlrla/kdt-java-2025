@@ -49,7 +49,7 @@
 ## :white_check_mark:2일차
 ### 1. 조건문
 - if문
-    - 
+
 - if ~ else문
 
 - if ~ else if문
