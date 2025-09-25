@@ -1,4 +1,4 @@
-package edu;
+package com.ruby.java.ch03if;
 
 //Annotation: 주석처럼 보이지만 주석이 아니라 컴파일러/JVM에게 전달되는 메타 데이터
 
@@ -17,5 +17,11 @@ public class Test18 {
 	 */
 	public int sum(int a, int b) {
 		return a + b;
+	}
 }
-}
+
+/*
+ * @author - 소스코드 작성자 이름
+ * @param - 매개변수에 대한 설명
+ * @return - 반환값에 대한 설명
+ * */

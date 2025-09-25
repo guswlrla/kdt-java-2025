@@ -1,4 +1,4 @@
-package edu;
+package com.ruby.java.ch03if;
 
 public class Test22 {
 	public static void main(String[] args) {

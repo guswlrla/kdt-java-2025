@@ -1,15 +1,15 @@
-package edu;
+package com.ruby.java.ch03if;
 
 //3.1 주석문
 
 /*
 * 98페이지 이클립스 단축키
-* 한줄 주석처리: ctrl+/
+* 한 줄 주석처리: ctrl + /
 * 
-* 여러줄 주석처리: 여러줄을 블럭으로 지정후 ctrl+shift+/ 해제: ctrl+shift+\
-*  대안: ctrl+shift+ c
+* 여러줄 주석처리: 여러 줄을 블럭으로 지정 후 ctrl + shift + / 해제: ctrl + shift + \
+*  대안: ctrl + shift + c
 *  
-*  indentation: 코드 자동 formatting > ctrl+shift+f
+*  indentation: 코드 자동 formatting(줄맞춤) - ctrl + shift + f 
 */
 
 public class Test17 {
@@ -25,5 +25,6 @@ public class Test17 {
 		for (int i = 0; i < 10; i++) {
 			sum += i;
 		}
+
 	}
 }
