@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.util.Scanner;
 
-public class QueryPreparedStatement {
+public class QueryPreparedStatement2 {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -37,7 +37,8 @@ public class QueryPreparedStatement {
 		}
 	}
 
-	private static void printQuery(ResultSet rs) throws Exception {
+	private static void printQuery(PreparedStatement psmt) throws Exception {
+		ResultSet rs = psmt.executeQuery();
 		ResultSetMetaData meta = rs.getMetaData();
 		int fields = meta.getColumnCount();
 
@@ -51,6 +52,7 @@ public class QueryPreparedStatement {
 			System.out.println();
 		}
 		rs.close();
+		psmt.close();
 	}
 
 	// 1. 인구 수를 입력 받아서 그보다 많은 인구를 가진 도시를 출력
@@ -61,8 +63,7 @@ public class QueryPreparedStatement {
 		PreparedStatement psmt = con.prepareStatement("select * from city where population > ?");
 		psmt.setInt(1, population);
 
-		ResultSet rs = psmt.executeQuery();
-		printQuery(rs);
+		printQuery(psmt);
 	}
 
 	// 2. 국가 코드를 입력 받아서 해당 국가의 도시의 이름과 인구를 출력
@@ -73,8 +74,7 @@ public class QueryPreparedStatement {
 		PreparedStatement psmt = con.prepareStatement("select name, population from city where countrycode = ?");
 		psmt.setString(1, countryCode);
 
-		ResultSet rs = psmt.executeQuery();
-		printQuery(rs);
+		printQuery(psmt);
 	}
 
 	// 2-1. 국가 명의 일부를 입력 받아서 해당 국가의 도시의 이름과 인구를 출력
@@ -86,8 +86,7 @@ public class QueryPreparedStatement {
 				"select city.name, city.population, country.name from city inner join country on country.code = city.countrycode where country.name like ?");
 		psmt.setString(1, "%" + countryName + "%");
 
-		ResultSet rs = psmt.executeQuery();
-		printQuery(rs);
+		printQuery(psmt);
 	}
 
 	// 2-2. 국가 코드 또는 국가 명의 일부를 입력 받아서 해당 국가의 도시명과 인구 출력
@@ -99,14 +98,12 @@ public class QueryPreparedStatement {
 			PreparedStatement psmt = con.prepareStatement(
 					"select city.name, city.population from city inner join country on country.code = city.countrycode where Country.code = ?");
 			psmt.setString(1, country);
-			ResultSet rs = psmt.executeQuery();
-			printQuery(rs);
+			printQuery(psmt);
 		} else { // 국가명으로 받을 경우
 			PreparedStatement psmt = con.prepareStatement(
 					"select city.name, city.population from city inner join country on country.code = city.countrycode where country.name like ?");
 			psmt.setString(1, "%" + country + "%");
-			ResultSet rs = psmt.executeQuery();
-			printQuery(rs);
+			printQuery(psmt);
 		}
 	}
 
@@ -118,8 +115,7 @@ public class QueryPreparedStatement {
 		PreparedStatement psmt = con.prepareStatement("select name, population from country where continent = ?");
 		psmt.setString(1, continent);
 		
-		ResultSet rs = psmt.executeQuery();
-		printQuery(rs);
+		printQuery(psmt);
 	}
 
 	// 4. 넓이를 입력 받아서 입력 값보다 작은 면적을 가진 국가의 이름과 면적을 출력
@@ -130,8 +126,7 @@ public class QueryPreparedStatement {
 		PreparedStatement psmt = con.prepareStatement("select name, surfaceArea from country where surfaceArea < ?");
 		psmt.setDouble(1, area);
 
-		ResultSet rs = psmt.executeQuery();
-		printQuery(rs);
+		printQuery(psmt);
 	}
 
 	// 5. 대한민국의 District를 입력 받아서 해당 지역에 있는 모든 도시를 출력
@@ -142,8 +137,7 @@ public class QueryPreparedStatement {
 		PreparedStatement psmt = con.prepareStatement("select name from city where district = ?");
 		psmt.setString(1, area);
 		
-		ResultSet rs = psmt.executeQuery();
-		printQuery(rs);
+		printQuery(psmt);
 	}
 
 	// 6. 언어를 입력 받아서 해당 언어가 국가 공식 언어인 국가명을 출력
@@ -154,8 +148,7 @@ public class QueryPreparedStatement {
 		PreparedStatement psmt = con.prepareStatement("select country.name from country inner join countrylanguage on code = countrycode where language = ?");
 		psmt.setString(1, lang);
 		
-		ResultSet rs = psmt.executeQuery();
-		printQuery(rs);
+		printQuery(psmt);
 	}
 
 	// 7. CountryLanguage에서 사용자가 입력 비율 이상인 언어의 국가 코드와 비율을 출력
@@ -166,8 +159,7 @@ public class QueryPreparedStatement {
 		PreparedStatement psmt = con.prepareStatement("select countrycode, Percentage from countrylanguage where percentage > ?");
 		psmt.setFloat(1, percentage);
 		
-		ResultSet rs = psmt.executeQuery();
-		printQuery(rs);
+		printQuery(psmt);
 	}
 
 }
